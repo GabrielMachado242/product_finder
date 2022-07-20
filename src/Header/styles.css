@@ -1,0 +1,86 @@
+header{
+ flex: 1;
+ background-color: #4c80ce;
+ padding: 1% 5%;
+ display: flex;
+ justify-content: space-between;
+ height: 85px;
+}
+
+header .logo{
+    color: azure;
+}
+
+header svg{
+    display: none;
+}
+
+header .header_estilo_container{
+    display: flex;
+    align-items:center;
+}
+
+body{
+    background-color: #2B0707;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+header nav ul li{
+
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 20px;
+    transition: opacity 0.2s;
+}
+
+header nav ul li a:hover{
+
+    opacity: 0.6;
+}
+
+@media(max-width: 764px){
+    header{
+        flex-direction: column;
+    }
+
+    header nav ul{
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    header nav ul li{
+        width: 110px;
+        max-width: 30px;
+        margin-left: 0;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header svg{
+        display: flex;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    header svg:hover{
+        opacity: 0.3;
+    }
+
+    header .header_estilo_container{
+        justify-content: space-between;
+    }
+}
