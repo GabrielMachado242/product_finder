@@ -16,9 +16,14 @@ function Header(){
     }, []);
     return(
         <header>
-            <img src={Logo} />
+            <img src={Logo} alt="Logo da Empresa" />
             <div className="header_estilo_container">
-            <input classname="campo" type="text" />
+            <div className="Container">
+                <form>
+                    <label htmlFor="search">Digite aqui</label>
+                <input name="search" id="search"/>
+                </form>
+            </div>
             <FiMenu size={24} onClick={() =>{
                 setMenuOpen(!menuOpen)
             }}/>
@@ -26,8 +31,8 @@ function Header(){
             {menuOpen && (
             <nav>
                 <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Registre-se</a></li>
+                    <li><a href="http://localhost:3000/login">Login</a></li>
+                    <li><a href="http://localhost:3000/gerenciar-produtos">Registre-se</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
