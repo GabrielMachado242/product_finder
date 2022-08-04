@@ -4,9 +4,9 @@ import Logo from "../components/logo.png";
 
 function Cabecalho (){
     return(
-        <header>
+        <header className="cabecalhoDois">
             <img src={Logo} alt="Logo da Empresa" />
-            <div className="Container">
+            <div className="Cont">
             <form>
             <label htmlFor="search">Digite aqui</label>
             <input name="search" id="search"/>

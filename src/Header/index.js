@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import './styles.css';
 import Logo from "../components/logo.png";
 import {FiMenu} from 'react-icons/fi';
+import './estilo.css';
 
 function Header(){
 
@@ -15,7 +15,7 @@ function Header(){
         })
     }, []);
     return(
-        <header>
+        <header className="cabecalhoUm">
             <img src={Logo} alt="Logo da Empresa" />
             <div className="header_estilo_container">
             <div className="Container">
