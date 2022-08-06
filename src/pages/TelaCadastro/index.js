@@ -7,15 +7,7 @@ function TelaCadastro(){
     return (
         <div>
         <Cabecalho />
-        <h1>Tela de cadastro do fornecedor</h1>
-            <Campo>
-                <form className="cadastro-form">
-                    <span className="cadastro-form-title">Product Finder</span> 
-                    <div className="Wrap-input">
-                        <input type="email" />
-                    </div>
-                </form>
-            </Campo>
+            <Campo />
             <Footer />
         </div>
         
