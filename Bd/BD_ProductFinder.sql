@@ -25,7 +25,7 @@ marca varchar (30),
 peso FLOAT,
 preco FLOAT,	
 tipo varchar (30),
-FOREIGN KEY (id_fornecedor) REFERENCES fornecedor (cnpj)  
+FOREIGN KEY (id_fornecedor)  REFERENCES fornecedor (cnpj)  
 	ON UPDATE CASCADE
 	ON DELETE CASCADE
 );
