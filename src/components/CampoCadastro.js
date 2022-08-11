@@ -16,7 +16,7 @@ function Campo(props){
                     </div>
                     <div className="Wrap-input">
                         <input className="input" type="date" />
-                        <span className="focus-input" data-placeholder="Data de nascimento"></span>
+                        <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="Wrap-input">
                         <input className="input" type="number" />
