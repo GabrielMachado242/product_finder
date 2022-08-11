@@ -1,7 +1,11 @@
 import React from "react";
 import './styles.css';
+import { useState } from 'react';
 
 function Campo(props){
+
+    const [nome, setNome] = useState("")
+
     return(
         <div className="ucontainer">
         <div className="Container-cadastro">
@@ -11,7 +15,7 @@ function Campo(props){
                 <form className="cadastro-form">
                     <span className="cadastro-form-title">Product Finder</span> 
                     <div className="Wrap-input">
-                        <input className="input" type="text" />
+                        <input className="input" type="text" value={nome} onChange={e => setNome(e. target.value)} />
                         <span className="focus-input" data-placeholder="Nome completo"></span>
                     </div>
                     <div className="Wrap-input">

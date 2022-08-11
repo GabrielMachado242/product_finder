@@ -104,7 +104,7 @@
 }
 
 .input:focus + .focus-input::after{
-    top: 5px;
+    top: -10px;
 }
 
 .input:focus + .focus-input::before{
@@ -130,11 +130,7 @@
     align-items: center;
     width: 50%;
     height: 40px;
-
-    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
-    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
-    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
-    background: linear-gradient(to left, #21d4fd, #b721ff);
+    background-color: green;
 }
 
 .Wrap-input{
