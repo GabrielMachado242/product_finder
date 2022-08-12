@@ -111,6 +111,14 @@
     width: 100%;
 }
 
+.has-val + .focus-input::after{
+    top: -10px;
+}
+
+.has-val + .focus-input::before{
+    width: 100%;
+}
+
 .container-cadastro-form-btn{
     display: flex;
     flex-wrap: wrap;
