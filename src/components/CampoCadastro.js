@@ -43,7 +43,7 @@ function Campo(props){
                         <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="container-cadastro-form-btn">
-                        <button className="cadastro-form-btn" type="submit" >Salvar</button>
+                        <button className="cadastro-form-btn" type="submit">Salvar</button>
                     </div>
                 </form>
             </div>
