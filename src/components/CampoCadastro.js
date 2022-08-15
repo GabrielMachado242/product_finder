@@ -10,13 +10,18 @@ function Campo(props){
     const [email, setEmail] = useState("")
     const [telefone, setTelefone] = useState("")
 
+    const CadFornecedor = async e =>{
+        e.preventDefault()
+        console.log(nome,data,cnpj,email,telefone);
+    }
+
     return(
         <div className="ucontainer">
         <div className="Container-cadastro">
             <div className="Wrap-cadastro">
                 {props.children}
 
-                <form className="cadastro-form">
+                <form className="cadastro-form" onSubmit={CadFornecedor}>
                     <span className="cadastro-form-title">Product Finder</span> 
                     <div className="Wrap-input">
                         <input className={nome !== "" ? 'has-val input' : 'input'} type="text" value={nome} onChange={e => setNome(e. target.value)} />
