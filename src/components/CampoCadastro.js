@@ -34,23 +34,23 @@ function Campo(props){
                 <form className="cadastro-form" onSubmit={CadFornecedor}>
                     <span className="cadastro-form-title">Product Finder</span> 
                     <div className="Wrap-input">
-                        <input className={valorInput !== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput} />
+                        <input className={nome!== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput}  value={nome} onChange={ e => setNome(e.target.value)} />
                         <span className="focus-input" data-placeholder="Nome completo"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={data !== "" ? 'has-val input' : 'input'} type="date" name="Data" onChange={valorInput} />
+                        <input className={data !== "" ? 'has-val input' : 'input'} type="date" name="Data" onChange={valorInput}  value={data} onChange={ e => setData(e.target.value)} />
                         <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={cnpj !== "" ? 'has-val input' : 'input'} type="number" name="cnpj" onChange={valorInput} />
+                        <input className={cnpj !== "" ? 'has-val input' : 'input'} type="number" name="cnpj" onChange={valorInput}  value={cnpj} onChange={ e => setCNPJ(e.target.value)} />
                         <span className="focus-input" data-placeholder="CNPJ"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={email !== "" ? 'has-val input' : 'input'} type="email" name="email" onChange={valorInput} />
+                        <input className={email !== "" ? 'has-val input' : 'input'} type="email" name="email" onChange={valorInput}  value={email} onChange={ e => setEmail(e.target.value)} />
                         <span className="focus-input" data-placeholder="E-mail"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={telefone !== "" ? 'has-val input' : 'input'} type="tel" name="telefone" onChange={valorInput} />
+                        <input className={telefone !== "" ? 'has-val input' : 'input'} type="tel" name="telefone" onChange={valorInput}  value={telefone} onChange={ e => setTelefone(e.target.value)} />
                         <span className="focus-input" data-placeholder="Telefone"></span>
                     </div>
                     <div className="">
