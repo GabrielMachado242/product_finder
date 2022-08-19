@@ -21,7 +21,7 @@ function Campo(props){
     const valorInput = e => setFornecedor({...fornecedor, [e.target.name]: e.target.value});
 
     const CadFornecedor = async e =>{
-        e.preventDefault()
+        e.preventDefault();
         console.log(fornecedor.Nome);
     }
 
