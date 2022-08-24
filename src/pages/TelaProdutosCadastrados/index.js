@@ -22,12 +22,12 @@ function TelaProdutos(){
                 </thead>
                 <tbody>
 
-                <tr key="{row.Id}">
+                {/* <tr key="{row.Id}">
                       <td>{row.Npme}</td>
                       <td>{row.Preço}</td>
                       <td>{row.Dados}</td>
                       
-                  </tr>
+                  </tr> */}
 
                 </tbody>
             </table>
