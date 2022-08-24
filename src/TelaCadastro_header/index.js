@@ -1,6 +1,7 @@
 import React from "react";
 import './styles.css';
-import Logo from "../components/logo.png";
+import Logo from "../components/img/logo.png";
+import Header2 from "../components/Layout2/index";
 
 function Cabecalho (){
     return(

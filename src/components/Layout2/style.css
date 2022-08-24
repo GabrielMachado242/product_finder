@@ -1,0 +1,33 @@
+.cabecalho2{
+    flex: 1;
+    background-color:#2C1A0B;
+    color: white;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    height: 135px;
+   }
+   
+  
+
+   
+   
+   .Container form input:focus{
+       background-color: rgb(255, 0, 0);
+   }
+   
+  
+   
+ 
+   
+   
+   
+
+   
+
+   
+ 
+
+   
+      
+   

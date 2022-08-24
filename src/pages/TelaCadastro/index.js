@@ -1,6 +1,6 @@
 import React from "react";
 import Cabecalho from "../../TelaCadastro_header";
-import Footer from "../../Rodape/footer";
+import Footer from "../../components/Layout/Rodape/footer";
 import Campo from "../../components/CampoCadastro";
 
 function TelaCadastro(){

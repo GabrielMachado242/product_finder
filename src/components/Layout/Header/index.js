@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Logo from "../components/logo.png";
+import Logo from "../../img/logo.png";
 import {FiMenu} from 'react-icons/fi';
 import './estilo.css';
 

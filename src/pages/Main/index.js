@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../Header";
-import Footer from "../../Rodape/footer";
+import Header from "../../components/Layout/Header/index";
+import Footer from "../../components/Layout/Rodape/footer";
 
 function Main(){
     return(

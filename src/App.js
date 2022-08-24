@@ -1,5 +1,5 @@
 import Routes from "./routes";
-import Header from "./Header";
+import Header from "./components/Layout/Header/index";
 
 function App() {
   return (
