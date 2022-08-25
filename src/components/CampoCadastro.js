@@ -20,6 +20,7 @@ function Campo(props){
 
     const valorInput = e => setFornecedor({...fornecedor, [e.target.name]: e.target.value});
 
+
     const CadFornecedor = async e =>{
         e.preventDefault();
         console.log(fornecedor.Nome);
@@ -34,7 +35,7 @@ function Campo(props){
                 <form className="cadastro-form" onSubmit={CadFornecedor}>
                     <span className="cadastro-form-title">Product Finder</span> 
                     <div className="Wrap-input">
-                        <input className={nome!== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput}  value={nome} onChange={ e => setNome(e.target.value)} />
+                        <input className={nome!== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder="Nome completo"></span>
                     </div>
                     <div className="Wrap-input">

@@ -2,6 +2,7 @@
 import React from "react";
 import Header2 from "../../components/Layout2/index";
 import Footer from "../../components/Layout/Rodape/footer";
+import { Row, Column } from 'react-foundation';
 
 function TelaProdutos(){
     return (
@@ -22,10 +23,10 @@ function TelaProdutos(){
                 </thead>
                 <tbody>
 
-                <tr key="{row.Id}">
-                      <td>{row.Npme}</td>
-                      <td>{row.Preço}</td>
-                      <td>{row.Dados}</td>
+                      <tr key="{Row.Id}">
+                      <td>{Row.Npme}</td>
+                      <td>{Row.Preço}</td>
+                      <td>{Row.Dados}</td>
                       
                   </tr>
 
