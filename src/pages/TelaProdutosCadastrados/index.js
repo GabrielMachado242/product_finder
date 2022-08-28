@@ -23,12 +23,19 @@ function TelaProdutos(){
                 </thead>
                 <tbody>
 
-                      <tr key="{Row.Id}">
-                      <td>{Row.Npme}</td>
-                      <td>{Row.Preço}</td>
-                      <td>{Row.Dados}</td>
+<<<<<<< HEAD
+                      <tr key="{row.Id}">
+                      <td>{row.Npme}</td>
+                      <td>{row.Preço}</td>
+                      <td>{row.Dados}</td>
+=======
+                {/* <tr key="{row.Id}">
+                      <td>{row.Npme}</td>
+                      <td>{row.Preço}</td>
+                      <td>{row.Dados}</td>
+>>>>>>> 537a6823472026ab5d7b6a12a33ec9fb130d9581
                       
-                  </tr>
+                  </tr> */}
 
                 </tbody>
             </table>
