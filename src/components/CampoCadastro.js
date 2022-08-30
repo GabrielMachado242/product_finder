@@ -1,6 +1,8 @@
 import React from "react";
 import './styles.css';
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function Campo(props){
 
@@ -20,9 +22,30 @@ function Campo(props){
 
     const valorInput = e => setFornecedor({...fornecedor, [e.target.name]: e.target.value});
 
+
     const CadFornecedor = async e =>{
         e.preventDefault();
-        console.log(fornecedor.Nome);
+        //console.log(fornecedor.Nome);
+        //console.log(fornecedor.Data);
+        //console.log(fornecedor.cnpj);
+        //console.log(fornecedor.telefone);
+        //console.log(fornecedor.email);
+
+        await fetch("http://localhost/API/Cadastrar.php.json", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+
+            },
+
+            body: JSON.stringify({fornecedor})
+        })
+
+        .then((response) => response.json())
+        .then((responseJson) => (
+           console.log(responseJson)
+        ));
     }
 
     return(
@@ -34,23 +57,23 @@ function Campo(props){
                 <form className="cadastro-form" onSubmit={CadFornecedor}>
                     <span className="cadastro-form-title">Product Finder</span> 
                     <div className="Wrap-input">
-                        <input className={nome!== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput}  value={nome} onChange={ e => setNome(e.target.value)} />
+                        <input className={nome!== "" ? 'has-val input' : 'input'} name="Nome" type="text" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder="Nome completo"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={data !== "" ? 'has-val input' : 'input'} type="date" name="Data" onChange={valorInput}  value={data} onChange={ e => setData(e.target.value)} />
+                        <input className={data !== "" ? 'has-val input' : 'input'} type="date" name="Data" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={cnpj !== "" ? 'has-val input' : 'input'} type="number" name="cnpj" onChange={valorInput}  value={cnpj} onChange={ e => setCNPJ(e.target.value)} />
+                        <input className={cnpj !== "" ? 'has-val input' : 'input'} type="number" name="cnpj" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder="CNPJ"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={email !== "" ? 'has-val input' : 'input'} type="email" name="email" onChange={valorInput}  value={email} onChange={ e => setEmail(e.target.value)} />
+                        <input className={email !== "" ? 'has-val input' : 'input'} type="email" name="email" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder="E-mail"></span>
                     </div>
                     <div className="Wrap-input">
-                        <input className={telefone !== "" ? 'has-val input' : 'input'} type="tel" name="telefone" onChange={valorInput}  value={telefone} onChange={ e => setTelefone(e.target.value)} />
+                        <input className={telefone !== "" ? 'has-val input' : 'input'} type="tel" name="telefone" onChange={valorInput}  />
                         <span className="focus-input" data-placeholder="Telefone"></span>
                     </div>
                     <div className="">
@@ -58,7 +81,9 @@ function Campo(props){
                         <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="container-cadastro-form-btn">
-                        <button className="cadastro-form-btn" type="submit">Salvar</button>
+
+                          <Button variant="primary" className="cadastro-form-btn" type="submit">Salvar</Button>{' '}
+
                     </div>
                 </form>
             </div>
