@@ -2,7 +2,6 @@ import React from "react";
 import './styles.css';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
 function Campo(props){
 
@@ -21,6 +20,12 @@ function Campo(props){
     });
 
     const valorInput = e => setFornecedor({...fornecedor, [e.target.name]: e.target.value});
+
+    const express = require('express');
+
+    const cors = require('cors');
+
+    const app = express();
 
 
     const CadFornecedor = async e =>{
