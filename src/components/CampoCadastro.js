@@ -25,7 +25,6 @@ function Campo(props){
 
     const cors = require('cors');
     
-    res.set('Access-Control-Allow-Origin', 'http://localhost/API/Cadastrar.php');
 
     const app = express();
 
