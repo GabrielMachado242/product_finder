@@ -2,7 +2,7 @@
 import React from "react";
 import Header2 from "../../components/Layout2/Header2/index"
 import Footer2 from "../../components/Layout2/Rodape2/Footer2"
-
+import {  CDBBtn, CDBIcon } from 'cdbreact';
 
 
 
@@ -30,7 +30,17 @@ function TelaProdutos(){
                 </thead>
                 <tbody>
 
-                     
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Arroz</td>
+                    <td>13,00</td>
+                    <td> 
+                        <CDBBtn flat color="dark" className="p-2">
+                         <CDBIcon fab icon="fa-brands fa-periscope" /> 
+                         </CDBBtn> 
+                    </td>
+                </tr>
+
                 {/* <tr key="{row.Id}">
                       <td>{row.Npme}</td>
                       <td>{row.Preço}</td>
