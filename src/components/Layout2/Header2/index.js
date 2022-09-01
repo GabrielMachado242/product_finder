@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Logo from "../img/logo.png";
+import Logo from "../../img/logo.png";
 import {FiMenu} from 'react-icons/fi';
 import './style.css';
 
@@ -22,8 +22,8 @@ function Header2(){
             <nav>
                 <ul>
                     <li><a href="http://localhost:3000">Home</a></li>
-                    <li><a href="http://localhost:3000/Produtos">Ver meus Produtos</a></li>
-                    <li><a href="  ">Registrar Produto</a></li>
+                    <li><a href="http://localhost:3000/produtos">Ver meus Produtos</a></li>
+                    <li><a href="http://localhost:3000/gerenciar-produtos">Registrar Produto</a></li>
                    
                 </ul>
             </nav>

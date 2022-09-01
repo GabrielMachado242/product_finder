@@ -38,11 +38,11 @@ function Campo(props){
 
     const CadFornecedor = async e =>{
         e.preventDefault();
-        //console.log(fornecedor.Nome);
-        //console.log(fornecedor.Data);
-        //console.log(fornecedor.cnpj);
-        //console.log(fornecedor.telefone);
-        //console.log(fornecedor.email);
+        // console.log(fornecedor.Nome);
+        // console.log(fornecedor.Data);
+        // console.log(fornecedor.cnpj);
+        // console.log(fornecedor.telefone);
+        // console.log(fornecedor.email);
 
         await fetch("http://localhost/API/Cadastrar.php.json", {
             method: "POST", credentials: "include",
