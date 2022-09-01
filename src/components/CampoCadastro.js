@@ -24,8 +24,17 @@ function Campo(props){
     const express = require('express');
 
     const cors = require('cors');
+    
+    res.set('Access-Control-Allow-Origin', 'http://localhost/API/Cadastrar.php');
 
     const app = express();
+
+    app.use(
+        cors({
+        origin: "*",
+        credentials: true
+    })
+    );
 
 
     const CadFornecedor = async e =>{
@@ -37,7 +46,7 @@ function Campo(props){
         //console.log(fornecedor.email);
 
         await fetch("http://localhost/API/Cadastrar.php.json", {
-            method: 'POST',
+            method: "POST", credentials: "include",
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
