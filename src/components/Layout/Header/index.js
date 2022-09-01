@@ -33,7 +33,7 @@ function Header(){
                 <ul>
                     <li><a href="http://localhost:3000/login">Login</a></li>
                     <li><a href="http://localhost:3000/cadastrar">Registre-se</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="http://localhost:3000/sobre">Sobre</a></li>
                 </ul>
             </nav>
              )}
