@@ -21,22 +21,23 @@ function Campo(props){
 
     const valorInput = e => setFornecedor({...fornecedor, [e.target.name]: e.target.value});
 
-    /*
 
-    const express = require('express');
+ /*   const express = require('express');
 
     const cors = require('cors');
-    
 
     const app = express();
 
-    app.use(
-        cors({
-        origin: "*",
-        credentials: true
-    })
-    );
-*/
+    app.use(express.json());
+
+    app.use((req, res, next) => {
+        app.use(cors());
+        res.header("Accsess-Control-Allow-Origin", "http://localhost/API/Cadastrar.php");
+        next();
+
+    });
+
+    */
 
     const CadFornecedor = async e =>{
         e.preventDefault();
@@ -46,7 +47,7 @@ function Campo(props){
         // console.log(fornecedor.telefone);
         // console.log(fornecedor.email);
 
-        await fetch("http://localhost/API/Cadastrar.php.json", {
+        await fetch("http://localhost/API/Cadastrar.php", {
             method: "POST", credentials: "include",
             headers: {
                 'Content-Type': 'application/json',
