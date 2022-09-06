@@ -3,8 +3,11 @@ import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer, CDBBox } from 
 
 export const Footer2 = () => {
   return (
+    
     <CDBFooter className="shadow">
+       
       <CDBBox
+        
         display="flex"
         justifyContent="between"
         alignItems="center"
