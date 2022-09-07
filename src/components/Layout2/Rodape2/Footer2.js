@@ -4,7 +4,7 @@ import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer, CDBBox } from 
 export const Footer2 = () => {
   return (
     
-    <CDBFooter className="shadow">
+    <CDBFooter className="shadow" >
        
       <CDBBox
         

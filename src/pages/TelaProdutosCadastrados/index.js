@@ -180,8 +180,8 @@ atualizaProduto= (produto) => {
                             </CDBBtn> 
                         </td>
                         <td>   
-                        <button type="button" class="btn btn-light"onClick={() => this.atualizarDadosProduto(produto.id)}>Atualizar</button>     
-                        <button type="button" class="btn btn-danger" onClick={() => this.deletarProduto(produto.id)}>Excluir</button>
+                        <button type="button" class="btn btn-light m-1"onClick={() => this.atualizarDadosProduto(produto.id)}>Atualizar</button>     
+                        <button type="button" class="btn btn-danger m-1" onClick={() => this.deletarProduto(produto.id)}>Excluir</button>
                         </td>
                     </tr>
                     )         

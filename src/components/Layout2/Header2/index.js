@@ -23,7 +23,7 @@ function Header2(){
                 <ul>
                     <li><a href="http://localhost:3000">Home</a></li>
                     <li><a href="http://localhost:3000/produtos">Ver meus Produtos</a></li>
-                    <li><a href="http://localhost:3000/gerenciar-produtos">Registrar Produto</a></li>
+                    
                    
                 </ul>
             </nav>

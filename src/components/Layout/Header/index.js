@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import Logo from "../../img/logo.png";
 import {FiMenu} from 'react-icons/fi';
 import './estilo.css';
+import {button} from 'react-bootstrap';
+
 
 function Header(){
 
@@ -18,11 +20,15 @@ function Header(){
         <header className="cabecalhoUm">
             <img src={Logo} alt="Logo da Empresa" />
             <div className="header_estilo_container">
+            <form class= "d-flex">
+                <input class="form-control m-2" type={"text"}/>
+                <button class="btn btn-primary m-2">Pesquisar</button>
+            </form>
             <div className="Container">
-                <form>
+                {/* <form>
                     <label htmlFor="search">Digite aqui</label>
                 <input name="search" id="search"/>
-                </form>
+                </form> */}
             </div>
             <FiMenu size={24} onClick={() =>{
                 setMenuOpen(!menuOpen)
