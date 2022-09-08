@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../../components/Layout/Header/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
-import {  CDBBtn, CDBIcon,  } from 'cdbreact';
-import {Form, Modal} from "react-bootstrap";
+import {  CDBBtn, CDBIcon  } from 'cdbreact';
+import {Form, Modal, Carousel} from "react-bootstrap";
 class Home extends React.Component{
 
     constructor(props) {
@@ -10,7 +10,7 @@ class Home extends React.Component{
 
         this.state = {
                 id: 0,
-                nome: '',
+                nome: 'asd',
                 preco: '',
                 endereco: '',
                 produtos : [
@@ -59,8 +59,7 @@ class Home extends React.Component{
   }
 
  // FUNÇÃO RESPONSAVEL POR CRIAR E ATUALIZAR A TABELA
- renderTabela(){
-                            
+ renderTabela(){           
     {/* criação das tabelas tabelas */}
     return <table class="table table-dark table-striped">
 <thead>
@@ -87,19 +86,66 @@ class Home extends React.Component{
         </td>
         
     </tr>
-    )         
+    ) 
 }                   
 </tbody>
 </table>
 
 }
 
+
+
     render()
     {return(
-        <div>
+        <div class= " bg-secondary text-white">
             <Header />
             
-        {this.renderTabela()};
+
+        {/* TESTANDO O USO DE Carousel  */}
+        <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Produtos em destaque</h1>
+        <Carousel>
+        
+    <Carousel.Item interval={5000}>
+        
+      <img
+        className="d-block w-100 "
+        src="holder.js/800x400?text=First slide&bg=373940"
+        alt="Primeira imagem"
+      />
+      <Carousel.Caption>
+        <h3>Primeira imagem</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item interval={5000}>
+      <img
+        className="d-block w-100 "
+        src="holder.js/800x400?text=Second slide&bg=282c34"
+        alt="Segunda imagem"
+      />
+      <Carousel.Caption>
+        <h3>Segunda imagem</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Carousel.Caption>
+    </Carousel.Item>
+    <Carousel.Item interval={5000}>
+        
+      <img
+        className="d-block w-100 "
+        src="holder.js/800x400?text=Third slide&bg=20232a"
+        alt="Terceira imagem"
+      />
+      <Carousel.Caption>
+        <h3>Terceira imagem</h3>
+        <p>
+          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+        </p>
+      </Carousel.Caption>
+    </Carousel.Item >
+  </Carousel>
+
+
+        {this.renderTabela()}
 
 
             <Footer2 />

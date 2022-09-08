@@ -1,6 +1,6 @@
 import React from "react";
 import Cabecalho from "../../TelaCadastro_header";
-import Footer from "../../components/Layout/Rodape/footer";
+import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import Campo from "../../components/CampoCadastro";
 
 function TelaCadastro(){
@@ -8,7 +8,7 @@ function TelaCadastro(){
         <div>
         <Cabecalho />
             <Campo />
-            <Footer />
+            <Footer2 />
         </div>
         
     );

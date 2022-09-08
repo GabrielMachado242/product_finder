@@ -10,8 +10,7 @@ function Cabecalho (){
                  <img src={Logo} alt="Logo da Empresa" />
                 <div className="Cont">
                 <form>
-                <label htmlFor="search">Digite aqui</label>
-                <input name="search" id="search"/>
+                
                 </form>
                 </div>
             </header>
