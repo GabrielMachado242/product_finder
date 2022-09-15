@@ -4,7 +4,7 @@ import Main from './pages/Main';
 import TelaCadastro from './pages/TelaCadastro';
 import GerenciarProdutos from './pages/GerenciarProdutos';
 import TelaProdutosCadastrados from './pages/TelaProdutosCadastrados';
-import TelaLogin from './TelaLogin';
+import TelaLogin from './pages/TelaLogin';
 import Sobre from './pages/Sobre'
 
 function Rotas(){

@@ -2,8 +2,10 @@ import React from "react";
 import './styles.css';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import Header from "./Layout/Header";
 
 function Campo(props){
+    
 
     const [nome, setNome] = useState("")
     const [data, setData] = useState("")
@@ -63,6 +65,7 @@ function Campo(props){
     }
 
     return(
+        
         <div className="ucontainer">
         <div className="Container-cadastro">
             <div className="Wrap-cadastro">
@@ -95,13 +98,15 @@ function Campo(props){
                         <span className="focus-input" data-placeholder=""></span>
                     </div>
                     <div className="container-cadastro-form-btn">
-
+                    
                           <Button variant="primary" className="cadastro-form-btn" type="submit">Salvar</Button>{' '}
+                          <Button variant="primary"  type="submit"  href="http://localhost:3000" > voltar</Button>{' '}
 
                     </div>
                 </form>
             </div>
         </div>
+        <header/>
     </div>
     );
 };
