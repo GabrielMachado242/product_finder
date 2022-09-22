@@ -1,9 +1,10 @@
 // importação
 import React from "react";
-import Header2 from "../../components/Layout2/Header2/index"
-import Footer2 from "../../components/Layout2/Rodape2/Footer2"
+import Header2 from "../../components/Layout2/Header2/index";
+import Footer2 from "../../components/Layout2/Rodape2/Footer2";
+import img1 from "../../components/img/Produtos/images.png";
 import {  CDBBtn, CDBIcon,  } from 'cdbreact';
-import {Form, Modal} from "react-bootstrap"
+import {Form, Modal, Col} from "react-bootstrap";
 
 
 //import { Row, Column } from 'react-foundation';
@@ -161,6 +162,7 @@ atualizaProduto= (produto) => {
                     return <table class="table table-dark table-striped">
             <thead>
                         <tr>
+                        <th scope="col"></th>
                         <th scope="col">ID</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Preço</th>
@@ -177,6 +179,7 @@ atualizaProduto= (produto) => {
                 
                     this.state.produtos.map((produto) =>
                     <tr>
+                        <td><img src= {img1} class= "m=1" /> </td>
                         <th scope="row"> {produto.id} </th>
                         <td>{ produto.nome} </td>
                         <td>{  produto.preco}</td>
@@ -335,23 +338,32 @@ atualizaProduto= (produto) => {
                     <Modal.Body>
                         <form>  
                             <Form.Group className="mb-3" >
-                                        <Form.Label> ID</Form.Label>
+                                        <Form.Label> ID:</Form.Label>
                                         <Form.Control type="text" readOnly={true}  />
                                 </Form.Group>
                                 
                                 <Form.Group className="mb-3" >
-                                        <Form.Label> nome</Form.Label>
+                                        <Form.Label> Nome:</Form.Label>
                                         <Form.Control type="text" placeholder="Nome do produto e peso se tiver" value={this.state.nome} onChange={this.atualizaNome} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" >
-                                        <Form.Label> Preço</Form.Label>
-                                        <Form.Control type="float" placeholder="Preço do produto" value={this.state.preco} onChange={this.atualizaPreco}/>
+                                        <Form.Label> Preço:</Form.Label>
+                                        <Form.Control type="number" placeholder="Preço do produto" value={this.state.preco} onChange={this.atualizaPreco}/>
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                        <Form.Label> Endereço</Form.Label>
+                                        <Form.Label> Endereço:</Form.Label>
                                         <Form.Control type="text" placeholder="Endereço de venda" value={this.state.endereco} onChange={this.atualizaEndereco}/>
                                 </Form.Group>
-                                
+
+                                <Form.Group as={Col} controlId="formGridState">
+                                <Form.Label>Tipo:</Form.Label>
+                                <Form.Select defaultValue="Escolha">
+                                    <option>Grãos</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </Form.Select>
+                                </Form.Group>
                         </form>
                     </Modal.Body>
                     <Modal.Footer>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Logo from "../../img/logo.png";
 import {FiMenu} from 'react-icons/fi';
+import { Button } from "react-bootstrap";
 import './style.css';
 
 function Header2(){
@@ -21,8 +22,8 @@ function Header2(){
             {menuOpen && (
             <nav>
                 <ul>
-                    <li><a href="http://localhost:3000">Home</a></li>
-                    <li><a href="http://localhost:3000/produtos">Ver meus Produtos</a></li>
+                    <li><Button variant="dark" href="http://localhost:3000">Home</Button></li>
+                    <li><Button variant="dark" href="http://localhost:3000/produtos">Ver meus Produtos</Button></li>
                     
                    
                 </ul>

@@ -102,12 +102,22 @@ abrirModal = () => {
     })
 
 }
-fecharModal = () => {
+
+abrirModal2 = () => {
     this.setState({
-        modalAberta: false
+        modalAberta2: true,
+        modalAberta: false,
     })
 
 }
+
+fecharModal = () => {
+    this.setState({
+        modalAberta: false,
+        modalAberta2: false
+    })
+}
+
 
 
     render (){
@@ -116,7 +126,7 @@ fecharModal = () => {
         // componentes do HEADER
         <div>
                 <header className="cabecalhoUm me-auto   ">
-                                        <img src={Logo} alt="Logo da Empresa" />
+                                        <img src={Logo} alt="Logo da Empresa" onClick={ <a href="http://localhost:3000" /> } />
                                         <div className="header_estilo_container">
                                         <form class= "d-flex">
                                             <input class="form-control m-1" type={"text"}/>
@@ -127,9 +137,9 @@ fecharModal = () => {
                                     
                                         <nav>
                                             <ul>
-                                                
+                                                 <li><Button variant="dark" href="http://localhost:3000">Home</Button></li>
                                                 <li><Button variant="dark" onClick={this.abrirModal}>Login</Button></li>
-                                                <li><Button variant="dark" href="http://localhost:3000/cadastrar">Registre-se</Button></li>
+                                                <li><Button variant="dark" onClick={this.abrirModal2}>Registre-se</Button></li>                                       
                                                 <li><Button  variant="dark" href="http://localhost:3000/sobre">Sobre</Button></li>
                                                 {/* botao temporario só pra acessar os produtos mais facilmente  */}
                                                 <li><Button  variant="dark" href="http://localhost:3000/produtos">Ver meus Produtos</Button></li>
@@ -148,7 +158,7 @@ fecharModal = () => {
                         <form>  
                                 
                                 <Form.Group className="mb-3" >
-                                        <Form.Label> Email:</Form.Label>
+                                        <Form.Label> E-mail:</Form.Label>
                                         <Form.Control type="text"  placeholder="Email" />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -166,12 +176,59 @@ fecharModal = () => {
                     <button type="submit" class="btn btn-primary" onClick={this.submit}>
                         Ir
                     </button>
-                 <div>
+                    <Button variant="link"  onClick={this.abrirModal2} > Criar novo cadastro</Button> 
+                
+                                        </Modal.Footer>
+                </Modal>
 
-                 <Button variant="link" href="http://localhost:3000/cadastrar" > Criar novo cadastro</Button> 
+            {/* Modal do Registre-se */}
 
+            <Modal show={this.state.modalAberta2} onHide={this.fecharModal}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>Fazer Registro</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form>  
+                                
+                                <Form.Group className="mb-3" >
+                                        <Form.Label> Nome completo:</Form.Label>
+                                        <Form.Control type="text"  placeholder="Nome completo" />
+                                </Form.Group><Form.Group className="mb-3" >
+                                        <Form.Label> Senha:</Form.Label>
+                                        <Form.Control type="text"  placeholder="Senha" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                        <Form.Label> Data:</Form.Label>
+                                        <Form.Control type="date"  placeholder="00/00/0000" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                        <Form.Label> CNPJ:</Form.Label>
+                                        <Form.Control type="number"  placeholder="CNPJ" />
+                                     
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                        <Form.Label> E-mail:</Form.Label>
+                                        <Form.Control type="text"  placeholder="Email" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                        <Form.Label> Telefone:</Form.Label>
+                                        <Form.Control type="number"  placeholder="(xx) x xxxx-xxxx" />
+                                </Form.Group>
+                                
+                             
+                                
+                        </form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                   
 
-                 </div>
+                    <button type="submit" class="btn btn-primary" onClick={this.submit}>
+                        Registre-se
+                    </button>
+                    <button type="submit" class="btn btn-primary" onClick={this.fecharModal}>
+                        Voltar
+                    </button>
+                 
                                         </Modal.Footer>
                 </Modal>
 

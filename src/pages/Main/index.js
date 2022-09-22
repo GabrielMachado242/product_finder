@@ -3,6 +3,7 @@ import Header from "../../components/Layout/Header/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import {  CDBBtn, CDBIcon  } from 'cdbreact';
 import {Form, Modal, Carousel} from "react-bootstrap";
+import img1 from "../../components/img/Produtos/images.png"
 class Home extends React.Component{
 
     constructor(props) {
@@ -131,8 +132,9 @@ class Home extends React.Component{
     <Carousel.Item interval={5000}>
         
       <img
+        src= " {img1} holder.js/800x400?text=Second slide&bg=282c34"
         className="d-block w-100 "
-        src="holder.js/800x400?text=Third slide&bg=20232a"
+        
         alt="Terceira imagem"
       />
       <Carousel.Caption>
