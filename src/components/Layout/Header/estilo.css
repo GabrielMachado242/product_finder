@@ -11,42 +11,17 @@
  height: 135px;
 }
 
-.Container{
-    width: 600px;
-    padding-top: 10px;
-}
-.Container form label{
-    display: block;
-    margin-bottom: 0.8em;
-    font-weight: bold;
-}
-.Container form input{
-    color: inherit;
-    background: rgba(255, 255, 255, 0);
-    padding: 0.2em;
-    border: none;
-    border-bottom: solid 2px rgba(0, 0, 0, 0.979);
-    border-radius: 8px 8px 0 0;
-    font-size: 3.5rem;
-    font-weight: bold;
-    width: 100%;
-    outline: none;
-    transition: background-color 0.5s ease-in;
-}
 
-.Container form input:focus{
-    background-color: rgba(32, 0, 0, 0.05);
-}
 
-header svg{
-    display: none;
-}
 
+
+
+ /* campo de pesquisa do header */
 header .header_estilo_container{
     display: flex;
     align-items:center;
 }
-
+/*  campo de nav do header*/
 header nav ul {
     list-style: none;
     display: flex;
@@ -110,4 +85,5 @@ header nav ul li a:hover{
 
 .logo{
     width: 180px;
+    
 }

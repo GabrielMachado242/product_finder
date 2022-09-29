@@ -4,7 +4,12 @@ import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import {  CDBBtn, CDBIcon  } from 'cdbreact';
 import {Form, Modal, Carousel} from "react-bootstrap";
 import './style.css';
-import Logo from "../../components/img/logo.png"
+import Alimentos from "../../components/img/Tipos/Alimentos.png";
+import Eletronicos from "../../components/img/Tipos/Eletronicos.png";
+import Agropecuaria from "../../components/img/Tipos/agropecuaria.png";
+import Limpeza from "../../components/img/Tipos/Limpeza.png";
+import Outros from "../../components/img/Tipos/Outros.png";
+import Logo from "../../components/img/logo.png";
 class Home extends React.Component{
 
     constructor(props) {
@@ -149,16 +154,24 @@ class Home extends React.Component{
 
        
 {/* CRIANDO OS FILTROS POR TIPO DE PRODUTO */}
-
-        <a className="logo" href = "http://localhost:3000">
-                <img  src={Logo} alt="Logo da Empresa" />
+      <div className=" imgTipos2">
+      <a  href = "http://localhost:3000">
+                <img  className=" imgTipos" src={Alimentos} alt="Logo da Empresa" />
             </a>
             <a  href = "http://localhost:3000/produtos">
-                <img  className="logos" src={Logo} alt="Logo da Empresa" />
+                <img   className=" imgTipos" src={Eletronicos} alt="Logo da Empresa" />
             </a>
-            <a className="logo" href = "http://localhost:3000">
-                <img  src={Logo} alt="Logo da Empresa" />
+            <a  href = "http://localhost:3000">
+                <img  className=" imgTipos" src={Agropecuaria} alt="Logo da Empresa" />
             </a>
+            <a  href = "http://localhost:3000">
+                <img  className=" imgTipos" src={Limpeza} alt="Logo da Empresa" />
+            </a>
+            <a  href = "http://localhost:3000">
+                <img  className=" imgTipos" src={Outros} alt="Logo da Empresa" />
+            </a>
+      </div>
+        
 
 
 {/* IMPORTANDO AS FUNÇÕES */}

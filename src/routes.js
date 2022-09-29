@@ -1,10 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Main from './pages/Main';
+import Main from './pages/Home';
 import TelaCadastro from './pages/TelaCadastro';
 import GerenciarProdutos from './pages/GerenciarProdutos';
 import TelaProdutosCadastrados from './pages/TelaProdutosCadastrados';
 import TelaLogin from './pages/TelaLogin';
+import Carousel from './components/carousel/carousel';
 import Sobre from './pages/Sobre'
 
 function Rotas(){
@@ -17,6 +18,7 @@ function Rotas(){
                 <Route path="/gerenciar-produtos" element={<GerenciarProdutos />} />
                 <Route path="/produtos" element={<TelaProdutosCadastrados />} />
                 <Route path="/sobre"    element={<Sobre />} />
+                <Route path="/Carousel"    element={<Carousel />} />
             </Routes>
         </BrowserRouter>
     );
