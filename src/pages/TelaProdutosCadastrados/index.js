@@ -47,6 +47,7 @@ class TelaProdutos extends React.Component{
                         {'id' : 1,'fk': 2, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
                         {'id' : 2, 'fk': 2,'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
                         {'id' : 3, 'fk': 1,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
+                        {'id' : 3, 'fk': 1,'nome' : 'feijão 5K', 'preco' : 'R$ '+20.00 },
                     ],
 
                     modalAberta: false,
@@ -166,7 +167,7 @@ atualizaProduto= (produto) => {
                         <th scope="col">ID</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Preço</th>
-                        <th scope="col">Endereço</th>
+                        <th scope="col">Onde encontrar</th>
                         <th scope="col">Editar</th>
                         <th> <button type="submit" class="btn btn-primary" onClick={this.reset}>
                                 Novo

@@ -3,7 +3,8 @@ import Header from "../../components/Layout/Header/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import {  CDBBtn, CDBIcon  } from 'cdbreact';
 import {Form, Modal, Carousel} from "react-bootstrap";
-import img1 from "../../components/img/Produtos/images.png"
+import './style.css';
+import Logo from "../../components/img/logo.png"
 class Home extends React.Component{
 
     constructor(props) {
@@ -146,7 +147,21 @@ class Home extends React.Component{
     </Carousel.Item >
   </Carousel>
 
+       
+{/* CRIANDO OS FILTROS POR TIPO DE PRODUTO */}
 
+        <a className="logo" href = "http://localhost:3000">
+                <img  src={Logo} alt="Logo da Empresa" />
+            </a>
+            <a  href = "http://localhost:3000/produtos">
+                <img  className="logos" src={Logo} alt="Logo da Empresa" />
+            </a>
+            <a className="logo" href = "http://localhost:3000">
+                <img  src={Logo} alt="Logo da Empresa" />
+            </a>
+
+
+{/* IMPORTANDO AS FUNÇÕES */}
         {this.renderTabela()}
 
 

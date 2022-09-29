@@ -126,7 +126,9 @@ fecharModal = () => {
         // componentes do HEADER
         <div>
                 <header className="cabecalhoUm me-auto   ">
-                                        <img src={Logo} alt="Logo da Empresa" onClick={ <a href="http://localhost:3000" /> } />
+                    <a  alt="Costs" href = "http://localhost:3000">
+                                        <img className="logo" src={Logo} alt="Logo da Empresa" />
+                    </a>
                                         <div className="header_estilo_container">
                                         <form class= "d-flex">
                                             <input class="form-control m-1" type={"text"}/>

@@ -1,3 +1,6 @@
+
+
+
 .cabecalhoUm{
  flex: 1;
  background-color:#2C1A0B;
@@ -103,4 +106,8 @@ header nav ul li a:hover{
     header .header_estilo_container{
         justify-content: space-between;
     }
+}
+
+.logo{
+    width: 180px;
 }

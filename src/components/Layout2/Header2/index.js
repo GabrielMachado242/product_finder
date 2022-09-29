@@ -17,7 +17,10 @@ function Header2(){
     }, []);
     return(
         <header className="cabecalho2">
-            <img src={Logo} alt="Logo da Empresa" />
+            <a  href = "http://localhost:3000">
+                <img  className="logo" src={Logo} alt="Logo da Empresa" />
+            </a>
+     
             
             {menuOpen && (
             <nav>
