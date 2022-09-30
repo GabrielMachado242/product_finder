@@ -2,14 +2,14 @@ import React from "react";
 import Header from "../../components/Layout/Header/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import {  CDBBtn, CDBIcon  } from 'cdbreact';
-import {Form, Modal, Carousel} from "react-bootstrap";
+import { Carousel} from "react-bootstrap";
 import './style.css';
 import Alimentos from "../../components/img/Tipos/Alimentos.png";
 import Eletronicos from "../../components/img/Tipos/Eletronicos.png";
 import Agropecuaria from "../../components/img/Tipos/agropecuaria.png";
 import Limpeza from "../../components/img/Tipos/Limpeza.png";
 import Outros from "../../components/img/Tipos/Outros.png";
-import Logo from "../../components/img/logo.png";
+
 class Home extends React.Component{
 
     constructor(props) {
