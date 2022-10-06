@@ -6,7 +6,7 @@ import { Carousel} from "react-bootstrap";
 import './style.css';
 import Alimentos from "../../components/img/Tipos/Alimentos.png";
 import Eletronicos from "../../components/img/Tipos/Eletronicos.png";
-import Agropecuaria from "../../components/img/Tipos/agropecuaria.png";
+import Agropecuaria from "../../components/img/Tipos/Agropecuaria.png";
 import Limpeza from "../../components/img/Tipos/Limpeza.png";
 import Outros from "../../components/img/Tipos/Outros.png";
 
