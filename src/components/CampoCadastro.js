@@ -49,7 +49,7 @@ function Campo(props){
         // console.log(fornecedor.telefone);
         // console.log(fornecedor.email);
 
-        await fetch("http://localhost/API/Cadastrar.php.json", {
+        await fetch("https://localhost:7201/api/Fornecedor", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

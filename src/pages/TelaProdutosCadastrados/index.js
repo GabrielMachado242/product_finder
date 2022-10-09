@@ -75,7 +75,7 @@ class TelaProdutos extends React.Component{
         // FUNÇÂO GET para produto
         buscarProduto(){
               //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
-             fetch("  ")
+             fetch(" https://localhost:7201/api/Produtos ")
              //convertendo a tesposta para o formato json
              .then(resposta => resposta.json())
              // passando o resultado de cima para dados e depois mudando o estado de produtos
@@ -100,7 +100,7 @@ class TelaProdutos extends React.Component{
 
         atualizarDadosProduto = (id) => {
             //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
-            fetch("  /"+id, { method: 'GET'})
+            fetch(" https://localhost:7201/api/Produtos /"+id, { method: 'GET'})
 
             //como resposta é retornado somente o status
             .then(resposta => resposta.json())
@@ -118,7 +118,7 @@ class TelaProdutos extends React.Component{
       }
 // FUNÇÃO POST para cadastrar o produto
         cadastraProduto= (produto) => {
-            fetch("  ", 
+            fetch(" https://localhost:7201/api/Produtos ", 
                         { method: 'POST',
                         headers: {'Content-Type' : 'application/json'},
                         body: JSON.stringify(produto),
