@@ -9,6 +9,7 @@ import Eletronicos from "../../components/img/Tipos/Eletronicos.png";
 import Agropecuaria from "../../components/img/Tipos/Agropecuaria.png";
 import Limpeza from "../../components/img/Tipos/Limpeza.png";
 import Outros from "../../components/img/Tipos/Outros.png";
+import Slider from "../../components/Carousel/index";
 
 class Home extends React.Component{
 
@@ -110,7 +111,10 @@ class Home extends React.Component{
 
         {/* TESTANDO O USO DE Carousel  */}
         <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Produtos em destaque</h1>
-        <Carousel>
+
+        <Slider/>
+
+        {/* <Carousel>
         
     <Carousel.Item interval={5000}>
         
@@ -150,7 +154,7 @@ class Home extends React.Component{
         </p>
       </Carousel.Caption>
     </Carousel.Item >
-  </Carousel>
+  </Carousel> */}
 
        
 {/* CRIANDO OS FILTROS POR TIPO DE PRODUTO */}
