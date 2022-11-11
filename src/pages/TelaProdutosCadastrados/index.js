@@ -88,7 +88,7 @@ class TelaProdutos extends React.Component{
         // FUNÇÂO DELET
         deletarProduto = (id) => {
               //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
-              fetch("  /"+id, { method: 'DELETE'})
+              fetch(" https://localhost:7201/api/Produtos/"+id, { method: 'DELETE'})
               //como resposta é retornado somente o status
               .then(resposta =>{
                  if(resposta.ok){
@@ -137,7 +137,7 @@ class TelaProdutos extends React.Component{
     
 // FUNÇÃO metodo PUT para cadastrar o produto
 atualizaProduto= (produto) => {
-    fetch("  ", 
+    fetch("https://localhost:7201/api/Produtos", 
                 { method: 'PUT',
                 headers: {'Content-Type' : 'application/json'},
                 body: JSON.stringify(produto),
@@ -228,7 +228,7 @@ atualizaProduto= (produto) => {
         //Função para pegar somente o endereço que o produto esta registrado
         mostrarLocal = (id) => {
             //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
-            fetch("  /"+id, { method: 'GET'})
+            fetch(" https://localhost:7201/api/Produtos /"+id, { method: 'GET'})
 
             //como resposta é retornado somente o status
             .then(resposta => resposta.json())
