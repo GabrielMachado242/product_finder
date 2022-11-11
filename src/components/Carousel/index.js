@@ -1,11 +1,11 @@
 import {React, useState } from "react";
 import '../Carousel/slider.scss';
 import ImgComp from "../img/Destaques/ImgComp";
-import i1 from "../img/Destaques/1.png";
-import i2 from "../img/Destaques/2.jpg";
-import i3 from "../img/Destaques/3.png";
-import i4 from "../img/Destaques/1.png";
-import i5 from "../img/Destaques/1.png";
+import i1 from "../img/Destaques/santaHelena.png";
+import i2 from "../img/Destaques/swirl.jpg";
+import i3 from "../img/Destaques/whole.jpg";
+import i4 from "../img/Destaques/sabor.png";
+import i5 from "../img/Destaques/3.png";
 function Slider(){
 
     // criando um array para o componente do silider 
@@ -13,8 +13,9 @@ let sliderArr = [
     <ImgComp src={i1}/>,
     <ImgComp src={i2}/>,
     <ImgComp src={i3}/>,
-    <ImgComp src={i1}/>,
-    <ImgComp src={i1}/>
+    <ImgComp src={i4}/>,
+    <ImgComp src={i5}/>
+    
 ];
     const [x,setX] = useState(0);
 

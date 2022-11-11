@@ -143,8 +143,7 @@ fecharModal = () => {
                                                 <li><Button variant="dark" onClick={this.abrirModal}>Login</Button></li>
                                                 <li><Button variant="dark" onClick={this.abrirModal2}>Registre-se</Button></li>                                       
                                                 <li><Button  variant="dark" href="http://localhost:3000/sobre">Sobre</Button></li>
-                                                {/* botao temporario só pra acessar os produtos mais facilmente  */}
-                                                <li><Button  variant="dark" href="http://localhost:3000/produtos">Ver meus Produtos</Button></li>
+                                             
                                             </ul>
                                         </nav>
                         </header>

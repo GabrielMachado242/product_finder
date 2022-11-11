@@ -2,10 +2,10 @@
 import React from "react";
 import Header2 from "../../components/Layout2/Header2/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
-import img1 from "../../components/img/Produtos/images.png";
+import img1 from "../../components/img/img.png";
 import {  CDBBtn, CDBIcon,  } from 'cdbreact';
 import {Form, Modal, Col} from "react-bootstrap";
-
+import style from "../TelaProdutosCadastrados/style.css";
 
 //import { Row, Column } from 'react-foundation';
 
@@ -24,30 +24,9 @@ class TelaProdutos extends React.Component{
                     fk:2,
                     nome: '',
                     preco: '',
-                    endereco: 'Nao tem nome',
+                    endereco: '',
                     produtos : [
-                            // apagar esses dados quando linkar com a api
-                        {'id' : 1,'fk': 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2, 'fk': 2,'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3,'fk': 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 1, 'fk': 2,'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2,'fk': 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 3,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 1, 'fk': 3,'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2,'fk': 4, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 2,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 1, 'fk': 1,'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2, 'fk': 1,'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 1,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3,'fk': 4, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 1, 'fk': 2,'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2, 'fk': 3,'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 3,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk':2,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 1,'fk': 2, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                        {'id' : 2, 'fk': 2,'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 1,'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                        {'id' : 3, 'fk': 1,'nome' : 'feijão 5K', 'preco' : 'R$ '+20.00 },
+
                     ],
 
                     modalAberta: false,
@@ -180,9 +159,9 @@ atualizaProduto= (produto) => {
                 
                     this.state.produtos.map((produto) =>
                     <tr>
-                        <td><img src= {img1} class= "m=1" /> </td>
+                        <td><img className="imgProd" src= {img1}    /> </td>
                         <th scope="row"> {produto.id} </th>
-                        <td>{ produto.nome} </td>
+                        <td  >{ produto.nome} </td>
                         <td>{  produto.preco}</td>
                         <td> 
                             <CDBBtn flat color="dark" className="p-2">

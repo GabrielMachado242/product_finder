@@ -1,6 +1,7 @@
+// estilo do carousel
 .sliderx{
     border:none;
-    width: 50%;
+    width: 40%;
     height: 50vh;
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +18,7 @@
     }
     
 }
-
+//estilo das bordas
 .slidex{
     position: relative;
     min-width: 100%;
@@ -27,7 +28,7 @@
     border: black;
     
 }
-
+// estilo dos botoes do carousel
 %btn-styles {
 
     position: absolute;

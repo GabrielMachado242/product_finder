@@ -18,7 +18,7 @@ class Home extends React.Component{
 
         this.state = {
                 id: 0,
-                nome: 'asd',
+                nome: '',
                 preco: '',
                 endereco: '',
                 produtos : [
@@ -27,23 +27,7 @@ class Home extends React.Component{
                     {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
                     {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
                     {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                    {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                    {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                    {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                    {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
-                    {'id' : 1, 'nome' : 'macarrão vendeu', 'preco' : 'R$ '+5.25  },
-                    {'id' : 2, 'nome' : 'feijão preto', 'preco' : 'R$ '+20.00 },
-                    {'id' : 3, 'nome' : 'batata 5K', 'preco' : 'R$ '+20.00 },
+
                 ],
 
                 modalAberta: false
@@ -55,7 +39,7 @@ class Home extends React.Component{
      // FUNÇÂO GET para produto
      buscarProduto(){
         //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
-       fetch("  ")
+       fetch("https://localhost:7201/api/Produtos")
        //convertendo a tesposta para o formato json
        .then(resposta => resposta.json())
        // passando o resultado de cima para dados e depois mudando o estado de produtos
@@ -110,51 +94,9 @@ class Home extends React.Component{
             
 
         {/* TESTANDO O USO DE Carousel  */}
-        <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Produtos em destaque</h1>
+        <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Marcas em destaque</h1>
 
         <Slider/>
-
-        {/* <Carousel>
-        
-    <Carousel.Item interval={5000}>
-        
-      <img
-        className="d-block w-100 "
-        src="holder.js/800x400?text=First slide&bg=373940"
-        alt="Primeira imagem"
-      />
-      <Carousel.Caption>
-        <h3>Primeira imagem</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={5000}>
-      <img
-        className="d-block w-100 "
-        src="holder.js/800x400?text=Second slide&bg=282c34"
-        alt="Segunda imagem"
-      />
-      <Carousel.Caption>
-        <h3>Segunda imagem</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item interval={5000}>
-        
-      <img
-        src= " {img1} holder.js/800x400?text=Second slide&bg=282c34"
-        className="d-block w-100 "
-        
-        alt="Terceira imagem"
-      />
-      <Carousel.Caption>
-        <h3>Terceira imagem</h3>
-        <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-        </p>
-      </Carousel.Caption>
-    </Carousel.Item >
-  </Carousel> */}
 
        
 {/* CRIANDO OS FILTROS POR TIPO DE PRODUTO */}
