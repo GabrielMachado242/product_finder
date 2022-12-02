@@ -50,7 +50,6 @@ class TelaProdutos extends React.Component{
             
         }
 
-        // criando as funçoes para facilitar na hora do uso
         // FUNÇÂO GET para produto
         buscarProduto(){
               //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
@@ -78,7 +77,7 @@ class TelaProdutos extends React.Component{
         }
 
         atualizarDadosProduto = (id) => {
-            //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
+            //fazendo busca na api 
             fetch(" https://localhost:7201/api/Produtos /"+id, { method: 'GET'})
 
             //como resposta é retornado somente o status
@@ -116,7 +115,7 @@ class TelaProdutos extends React.Component{
     
 // FUNÇÃO metodo PUT para cadastrar o produto
 atualizaProduto= (produto) => {
-    fetch("https://localhost:7201/api/Produtos", 
+    fetch("https://localhost:7201/api/Produtos"+produto.id, 
                 { method: 'PUT',
                 headers: {'Content-Type' : 'application/json'},
                 body: JSON.stringify(produto),
@@ -140,45 +139,44 @@ atualizaProduto= (produto) => {
                             
                     {/* criação das tabelas tabelas */}
                     return <table class="table table-dark table-striped">
-            <thead>
-                        <tr>
-                        <th scope="col"></th>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Onde encontrar</th>
-                        <th scope="col">Editar</th>
-                        <th> <button type="submit" class="btn btn-primary" onClick={this.reset}>
-                                Novo
-                             </button>
-                        </th>
-                        </tr>
-            </thead>
+                                    <thead>
+                                                <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Preço</th>
+                                                <th scope="col">Onde encontrar</th>
+                                                <th scope="col">Editar</th>
+                                                <th> <button type="submit" class="btn btn-primary" onClick={this.reset}>
+                                                        Novo
+                                                    </button>
+                                                </th>
+                                                </tr>
+                                    </thead>
 
-            <tbody>{
-                
-                    this.state.produtos.map((produto) =>
-                    <tr>
-                        <td><img className="imgProd" src= {img1}    /> </td>
-                        <th scope="row"> {produto.id} </th>
-                        <td  >{ produto.nome} </td>
-                        <td>{  produto.preco}</td>
-                        <td> 
-                            <CDBBtn flat color="dark" className="p-2">
-                            <CDBIcon fab icon="fa-brands fa-periscope"onClick={() => this.mostrarLocal(produto.id)} /> 
-                            </CDBBtn> 
-                        </td>
-                        <td>   
-                        <button type="button" class="btn btn-light m-1"onClick={() => this.atualizarDadosProduto(produto.id)}>Atualizar</button>     
-                        <button type="button" class="btn btn-danger m-1" onClick={() => this.deletarProduto(produto.id)}>Excluir</button>
-                        </td>
-                        <td> </td>
-                    </tr>
-                    )         
-                }                   
-            </tbody>
-   </table>
-   
+                                    <tbody>{
+                                        
+                                            this.state.produtos.map((produto) =>
+                                            <tr>
+                                                <td><img className="imgProd" src= {img1}    /> </td>
+                                                <th scope="row"> {produto.id} </th>
+                                                <td  >{ produto.nome} </td>
+                                                <td>{  produto.preco}</td>
+                                                <td> 
+                                                    <CDBBtn flat color="dark" className="p-2">
+                                                    <CDBIcon fab icon="fa-brands fa-periscope"onClick={() => this.mostrarLocal(produto.id)} /> 
+                                                    </CDBBtn> 
+                                                </td>
+                                                <td>   
+                                                <button type="button" class="btn btn-light m-1"onClick={() => this.atualizarDadosProduto(produto.id)}>Atualizar</button>     
+                                                <button type="button" class="btn btn-danger m-1" onClick={() => this.deletarProduto(produto.id)}>Excluir</button>
+                                                </td>
+                                                <td> </td>
+                                            </tr>
+                                            )         
+                                        }                   
+                                    </tbody>
+                        </table>
         }
 
 // FUNÇÕES responsavel pela atualização do campo de cadastro
@@ -311,7 +309,7 @@ atualizaProduto= (produto) => {
 
                 {/* MODAL CADASTRA PRODUTO */}
 
-                <Modal show={this.state.modalAberta} onHide={this.fecharModal}>
+                <Modal className=" t-modal primary " show={this.state.modalAberta} onHide={this.fecharModal}>
                     <Modal.Header closeButton>
                     <Modal.Title>Dados do produto</Modal.Title>
                     </Modal.Header>
@@ -336,12 +334,13 @@ atualizaProduto= (produto) => {
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridState">
-                                <Form.Label>Tipo:</Form.Label>
+                                <Form.Label>Categoria:</Form.Label>
                                 <Form.Select defaultValue="Escolha">
-                                    <option>Grãos</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                    <option>Alimentos</option>
+                                    <option>Eletronicos</option>
+                                    <option>Agropecuaria</option>
+                                    <option>Limpeza</option>
+                                    <option>Outras</option>
                                 </Form.Select>
                                 </Form.Group>
                         </form>
@@ -360,7 +359,7 @@ atualizaProduto= (produto) => {
 
                 {/* MODAL INFORMA ENDEREÇO */}
 
-                <Modal show={this.state.modalAberta2} onHide={this.fecharModal2}>
+                <Modal className=" t-modal primary " show={this.state.modalAberta2} onHide={this.fecharModal2}>
                     <Modal.Header closeButton>
                     <Modal.Title>Endereço do produto</Modal.Title>
                     </Modal.Header>
@@ -382,7 +381,7 @@ atualizaProduto= (produto) => {
                 </Modal>
 
                 {/* Modal de confirmação de exclusão ainda em desenvolvimento*/}
-                <Modal show={this.state.modalAberta3} onHide={this.fecharModal3}>
+                <Modal className=" t-modal primary " show={this.state.modalAberta3} onHide={this.fecharModal3}>
                     <Modal.Header closeButton>
                     <Modal.Title>AVISO</Modal.Title>
                     </Modal.Header>

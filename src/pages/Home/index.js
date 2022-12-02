@@ -10,6 +10,7 @@ import Agropecuaria from "../../components/img/Tipos/Agropecuaria.png";
 import Limpeza from "../../components/img/Tipos/Limpeza.png";
 import Outros from "../../components/img/Tipos/Outros.png";
 import Slider from "../../components/Carousel/index";
+import img1 from "../../components/img/img.png";
 
 class Home extends React.Component{
 
@@ -56,6 +57,7 @@ class Home extends React.Component{
     return <table class="table table-dark table-striped">
 <thead>
         <tr>
+        <th scope="col"></th>
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Preço</th>
@@ -68,6 +70,7 @@ class Home extends React.Component{
 
     this.state.produtos.map((produto) =>
     <tr>
+         <td><img className="imgProd" src= {img1}    /> </td>
         <th scope="row"> {produto.id} </th>
         <td>{ produto.nome} </td>
         <td>{  produto.preco}</td>

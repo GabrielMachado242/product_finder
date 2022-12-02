@@ -151,7 +151,7 @@ fecharModal = () => {
 
                         {/* MODAL DO Login */}
 
-                        <Modal show={this.state.modalAberta} onHide={this.fecharModal}>
+                        <Modal className="t-modal primary" show={this.state.modalAberta} onHide={this.fecharModal}>
                     <Modal.Header closeButton>
                     <Modal.Title>Fazer login</Modal.Title>
                     </Modal.Header>
@@ -184,7 +184,7 @@ fecharModal = () => {
 
             {/* Modal do Registre-se */}
 
-            <Modal show={this.state.modalAberta2} onHide={this.fecharModal}>
+            <Modal className="t-modal primary" show={this.state.modalAberta2} onHide={this.fecharModal}>
                     <Modal.Header closeButton>
                     <Modal.Title>Fazer Registro</Modal.Title>
                     </Modal.Header>
