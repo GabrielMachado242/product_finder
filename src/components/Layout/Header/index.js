@@ -129,13 +129,13 @@ fecharModal = () => {
                     <a  alt="Costs" href = "http://localhost:3000">
                                         <img className="logo" src={Logo} alt="Logo da Empresa" />
                     </a>
-                                        <div className="header_estilo_container">
+                                        {/* <div className="header_estilo_container">
                                         <form class= "d-flex">
                                             <input class="form-control m-1" type={"text"}/>
                                             <Button variant="dark  mr-1">Pesquisar</Button>
                                         </form>
                                     
-                                        </div>
+                                        </div> */}
                                     
                                         <nav>
                                             <ul>

@@ -24,7 +24,7 @@ class TelaProdutos extends React.Component{
                     fk:2,
                     nome: '',
                     preco: '',
-                    endereco: '',
+                    produtoEstabelecimento: '',
                     produtos : [
 
                     ],
@@ -65,7 +65,7 @@ class TelaProdutos extends React.Component{
         }
         // FUNÇÂO DELET
         deletarProduto = (id) => {
-              //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
+              //fazendo busca na api 
               fetch(" https://localhost:7201/api/Produtos/"+id, { method: 'DELETE'})
               //como resposta é retornado somente o status
               .then(resposta =>{
@@ -89,7 +89,7 @@ class TelaProdutos extends React.Component{
                 id: produto.id,
                 nome: produto.nome,
                 preco: produto.preco,
-                endereco: produto.endereco})  
+                produtoEstabelecimento: produto.endereco})  
            })
            this.abrirModal();
           
@@ -134,50 +134,54 @@ atualizaProduto= (produto) => {
 
 
 
-        // FUNÇÃO RESPONSAVEL POR CRIAR E ATUALIZAR A TABELA
-        renderTabela(){
+         // FUNÇÃO RESPONSAVEL POR CRIAR E ATUALIZAR A TABELA
+         renderTabela(){
                             
                     {/* criação das tabelas tabelas */}
                     return <table class="table table-dark table-striped">
-                                    <thead>
-                                                <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">ID</th>
-                                                <th scope="col">Nome</th>
-                                                <th scope="col">Preço</th>
-                                                <th scope="col">Onde encontrar</th>
-                                                <th scope="col">Editar</th>
-                                                <th> <button type="submit" class="btn btn-primary" onClick={this.reset}>
-                                                        Novo
-                                                    </button>
-                                                </th>
-                                                </tr>
-                                    </thead>
+                        <thead>
+                            <tr>
+                            <th scope="col"></th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Onde encontrar</th>
+                            <th scope="col">Editar</th>
+                            <th> <button type="submit" class="btn btn-primary" 
+                                    onClick={this.reset}> Novo
+                                </button> </th>
+                            </tr>
+                        </thead>
 
-                                    <tbody>{
+                        <tbody>{
                                         
-                                            this.state.produtos.map((produto) =>
-                                            <tr>
-                                                <td><img className="imgProd" src= {img1}    /> </td>
-                                                <th scope="row"> {produto.id} </th>
-                                                <td  >{ produto.nome} </td>
-                                                <td>{  produto.preco}</td>
-                                                <td> 
-                                                    <CDBBtn flat color="dark" className="p-2">
-                                                    <CDBIcon fab icon="fa-brands fa-periscope"onClick={() => this.mostrarLocal(produto.id)} /> 
-                                                    </CDBBtn> 
-                                                </td>
-                                                <td>   
-                                                <button type="button" class="btn btn-light m-1"onClick={() => this.atualizarDadosProduto(produto.id)}>Atualizar</button>     
-                                                <button type="button" class="btn btn-danger m-1" onClick={() => this.deletarProduto(produto.id)}>Excluir</button>
-                                                </td>
-                                                <td> </td>
-                                            </tr>
-                                            )         
-                                        }                   
-                                    </tbody>
+                             this.state.produtos.map((produto) =>
+                             <tr>
+                                <td><img className="imgProd" src= {img1}    /> </td>
+                                <th scope="row"> {produto.id} </th>
+                                <td  >{ produto.nome} </td>
+                                <td>{  produto.preco}</td>
+                                <td> 
+                                    <CDBBtn flat color="dark" className="p-2">
+                                    <CDBIcon fab icon="fa-brands fa-periscope"onClick={() => 
+                                         this.mostrarLocal(produto.id)} /> 
+                                    </CDBBtn> 
+                                </td>
+                                <td>  
+                                    <button type="button" class="btn btn-light m-1"onClick={() => 
+                                        this.atualizarDadosProduto(produto.id)}> Atualizar
+                                    </button>  
+                                    <button type="button" class="btn btn-danger m-1" onClick={() => 
+                                        this.deletarProduto(produto.id)}>Excluir
+                                    </button>
+                                </td>
+                                <td> </td>
+                            </tr>
+                            )         
+                            }                   
+                        </tbody>
                         </table>
-        }
+                }
 
 // FUNÇÕES responsavel pela atualização do campo de cadastro
         atualizaNome = (e) => {

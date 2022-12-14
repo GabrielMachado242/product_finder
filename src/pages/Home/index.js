@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../../components/Layout/Header/index";
 import Footer2 from "../../components/Layout2/Rodape2/Footer2";
 import {  CDBBtn, CDBIcon  } from 'cdbreact';
-import { Carousel} from "react-bootstrap";
+import { Button} from "react-bootstrap";
 import './style.css';
 import Alimentos from "../../components/img/Tipos/Alimentos.png";
 import Eletronicos from "../../components/img/Tipos/Eletronicos.png";
@@ -13,6 +13,7 @@ import Slider from "../../components/Carousel/index";
 import img1 from "../../components/img/img.png";
 
 class Home extends React.Component{
+    
 
     constructor(props) {
         super(props);
@@ -32,13 +33,14 @@ class Home extends React.Component{
                 ],
 
                 modalAberta: false
-
+                    
         }
     }
 
 
      // FUNÇÂO GET para produto
      buscarProduto(){
+        
         //fazendo busca na api FALTA COLOCAR O ENDEREÇO DA API DENTRO DO FATCH
        fetch("https://localhost:7201/api/Produtos")
        //convertendo a tesposta para o formato json
@@ -90,14 +92,33 @@ class Home extends React.Component{
 
 
 
+
     render()
+
+    
+
     {return(
+            
         <div class= " bg-secondary text-white">
             <Header />
+            <div>
+
+                     <div className="pesquisa">
+                                        <form class= "d-flex">
+                                            <input class="form-control mt-2 " type={"text"} placeholder="O que você procura ?"
+                                            />
+                                            <Button variant="dark  mr-1 mt-2" >Pesquisar 
+                                            
+                                            </Button>
+                                        </form>
+                                    
+                                        </div>
+
+            </div>
             
 
         {/* TESTANDO O USO DE Carousel  */}
-        <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Marcas em destaque</h1>
+        {/* <h1 class= "bg-dark text-white d-flex flex-column justify-content-center align-items-center ">Marcas em destaque</h1> */}
 
         <Slider/>
 
@@ -132,6 +153,6 @@ class Home extends React.Component{
 
     );}
 
-}
+} 
 
-export default Home;
+export default Home ;
